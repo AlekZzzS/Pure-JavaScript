@@ -10,7 +10,10 @@
         "semi": "off",
         "linebreak-style": "off",
         "indent": "off",
-        "eol-last": "off"
+        "eol-last": "off",
+        "arrow-parens": "off",
+        "quotes": "off",
+        "comma-dangle": "off"
     },
     "extends": ["eslint:recommended", "google"] 
 }

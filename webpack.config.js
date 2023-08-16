@@ -1,5 +1,5 @@
 const path = require('path')
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
 const CopyPlugin = require("copy-webpack-plugin")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
@@ -14,7 +14,7 @@ const jsLoaders = () => {
             loader: 'babel-loader',
             options: {
                 presets: [
-                    ['@babel/preset-env', { targets: "defaults" }]
+                    ['@babel/preset-env', {targets: "defaults"}]
                 ]
             }
         }
@@ -32,7 +32,7 @@ console.log('IS DEV', isDev)
 module.exports = {
     context: path.resolve(__dirname, 'src'),
     mode: 'development',
-    entry: ['@babel/polyfill','./index.js'],
+    entry: ['@babel/polyfill', './index.js'],
     output: {
         filename: filename('js'),
         path: path.resolve(__dirname, 'dist')
@@ -60,7 +60,10 @@ module.exports = {
         }),
         new CopyPlugin({
             patterns: [
-              { from: path.resolve(__dirname, 'src/favicon.ico'), to: path.resolve(__dirname, 'dist') },
+                {
+                    from: path.resolve(__dirname, 'src/favicon.ico'),
+                    to: path.resolve(__dirname, 'dist')
+                }
             ],
         }),
         new MiniCssExtractPlugin({
@@ -80,7 +83,7 @@ module.exports = {
             {
                 test: /\.(?:js|mjs|cjs)$/,
                 exclude: /node_modules/,
-                use: jsLoaders(), 
+                use: jsLoaders()
             }
         ],
     }
