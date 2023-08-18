@@ -1,6 +1,6 @@
 import {ExcelComponent} from '@core/ExcelComponent'
 import {createTable} from './table.template'
-import { ResizeHandler } from './table.resize'
+import { resizeHandler } from './table.resize'
 import { shouldResize } from './table.functions'
 
 export class Table extends ExcelComponent {
