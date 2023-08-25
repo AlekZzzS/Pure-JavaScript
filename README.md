@@ -9,4 +9,5 @@
 - Patterns
 - Unit test
 - Optimization
+- Routing
 - DEV and PROD mode
