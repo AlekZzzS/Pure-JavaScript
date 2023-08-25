@@ -1,4 +1,3 @@
-import { toInlineStyles } from '../core/utils'
 import {APPLY_STYLE, CHANGE_TEXT, CHANGE_TITLE, CHANGES_STYLES, TABLE_RESIZE, UPDATE_DATE} from './types'
 
 export function rootReducer(state, action) {
